@@ -1,0 +1,43 @@
+GNU LESSER GENERAL PUBLIC LICENSE
+Version 3, 29 June 2007
+
+Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/>
+Everyone is permitted to copy and distribute verbatim copies of this license document, but changing it is not allowed.
+
+This is the complete text of the GNU Lesser General Public License version 3.
+
+  0. Additional Definitions.
+
+  As used herein, "this License" refers to version 3 of the GNU Lesser General Public License, and the "GNU GPL" refers to version 3 of the GNU General Public License.
+
+  "The Library" refers to a covered work governed by this License, other than an Application or a Combined Work as defined below.
+
+  "An Application" is any work that makes use of an interface provided by the Library, but which is not otherwise based on the Library. Defining a subclass of a class defined by the Library is deemed a mode of using an interface provided by the Library.
+
+  "A Combined Work" is a work produced by combining or linking an Application with the Library.
+
+  1. Exception to Section 3 of the GNU GPL.
+
+  You may convey a covered work under sections 3 and 4 of this License without being bound by section 3 of the GNU GPL.
+
+  2. Conveying Modified Versions.
+
+  If you modify a copy of the Library, you may convey the modified version under this License or under the GNU GPL, subject to the conditions of this License.
+
+  3. Object Code Incorporating Material from Library Header Files.
+
+  The object code form of an Application may incorporate material from a header file that is part of the Library under the conditions described in this License.
+
+  4. Combined Works.
+
+  You may convey a Combined Work under terms of your choice if you satisfy the notice, license, source, relinking, and installation requirements of this License.
+
+  5. Combined Libraries.
+
+  You may combine Library facilities with other facilities under the conditions described in this License.
+
+  6. Revised Versions of the GNU Lesser General Public License.
+
+  The Free Software Foundation may publish revised and/or new versions of the GNU Lesser General Public License from time to time. Each version is given a distinguishing version number.
+
+[The complete official license text is available at https://www.gnu.org/licenses/lgpl-3.0.txt]
