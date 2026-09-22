@@ -5,7 +5,6 @@ Vlahosアルゴリズムをベースにした方向性クロマキー処理で�
 髪の毛・半透明部分も自然に残しながら背景色を高品質に除去します。
 
 -----
-
 ## 制作者
 
 ▶▶制作者:[ゆっくりなぢ](https://x.com/yukkurinadi)
@@ -15,10 +14,13 @@ Vlahosアルゴリズムをベースにした方向性クロマキー処理で�
 本プラグインは [YMM4-DirectionalColorKey](https://github.com/routersys/YMM4-DirectionalColorKey) を基に改変した軽量版です。
 元プロジェクトのライセンス条件および著作権表示を維持しています。
 
+- 元プロジェクト: YMM4-DirectionalColorKey
+- 元作者・著作権者: routersys
 - 元ライセンス: GNU Lesser General Public License v3.0 (LGPL-3.0)
 - 改変者: ゆっくりなぢ
 - 改変年: 2026
-- ライセンス本文: `LICENSE`
+- ライセンス本文: [`LICENSE`](LICENSE)
+- 著作権・改変情報: [`NOTICE.md`](NOTICE.md)
 
 ------------------------------------------------------------------------
 ## 主な機能・特徴
