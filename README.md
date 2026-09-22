@@ -80,15 +80,7 @@ Vlahosアルゴリズムベースの方向性クロマキー。髪の毛・半�
 ------------------------------------------------------------------------
 ## インストール方法
 
-各プラグインの DLL を、対応するフォルダに配置してください。
-
-```text
-C:\YMM4\user\plugin\PixelSortPlugin\PixelSortPlugin.dll
-C:\YMM4\user\plugin\DirectionalColorKeyLite\DirectionalColorKeyLite.dll
-C:\YMM4\user\plugin\RadianceLite\RadianceLite.dll
-```
-
-YMM4 を起動（または再起動）すると、各エフェクトが一覧に追加されます。
+Releaseの.ymmeファイルをダウンロードし、ダブルクリックで自動的にダウンロードされます。
 
 ------------------------------------------------------------------------
 ## ライセンス
