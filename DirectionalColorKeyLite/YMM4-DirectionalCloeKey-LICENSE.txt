@@ -1,6 +1,0 @@
-This file name contains a typo and is retained only for compatibility.
-
-The current license notice is:
-`YMM4-DirectionalColorKey-LICENSE.txt`
-
-Please use that file instead.
