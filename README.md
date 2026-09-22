@@ -6,7 +6,7 @@
 - 🎞️ **軽量透過クロマキー** — 高品質半透明背景除去
 - 💡 **輻射光 (軽量版)** — 2次元大域照明・放射光
 
-全プラグインを `Lite-Effect` フォルダひとつに集めました。
+各プラグインは、それぞれのフォルダに配置して使用してください。
 
 -----
 
@@ -48,7 +48,7 @@
 ### 2. 軽量透過クロマキー (DirectionalColorKeyLite)
 
 Vlahosアルゴリズムベースの方向性クロマキー。髪の毛・半透明部分も自然に残します。
-[YMM4-DirectionalColorKey](https://github.com/routersys/YMM4-DirectionalColorKey) をインスパイア元として制作した軽量版です。
+[YMM4-DirectionalColorKey](https://github.com/routersys/YMM4-DirectionalColorKey) を基にした軽量版です。
 
 | 項目名 | 説明 |
 |---|---|
@@ -64,7 +64,7 @@ Vlahosアルゴリズムベースの方向性クロマキー。髪の毛・半�
 ### 3. 輻射光 (軽量版) (RadianceLite)
 
 映像の明るい部分を光源とした2次元大域照明エフェクト。
-[YMM4-Radiance](https://github.com/routersys/YMM4-Radiance) をインスパイア元として制作した軽量版です。
+[YMM4-Radiance](https://github.com/routersys/YMM4-Radiance) に着想を得た軽量実装です。
 
 | 項目名 | 説明 |
 |---|---|
@@ -80,33 +80,28 @@ Vlahosアルゴリズムベースの方向性クロマキー。髪の毛・半�
 ------------------------------------------------------------------------
 ## インストール方法
 
-【手動】
-この統合パックに含まれる全 dll ファイルを取得して、
-`C:\YMM4\user\plugin\Lite-Effect\` フォルダにすべて配置してください。
-Lite-Effect フォルダは作成してください。
+各プラグインの DLL を、対応するフォルダに配置してください。
 
-```
-C:\YMM4\user\plugin\Lite-Effect\
-├── PixelSortPlugin.dll
-├── DirectionalColorKeyLite.dll
-└── RadianceLite.dll
+```text
+C:\YMM4\user\plugin\PixelSortPlugin\PixelSortPlugin.dll
+C:\YMM4\user\plugin\DirectionalColorKeyLite\DirectionalColorKeyLite.dll
+C:\YMM4\user\plugin\RadianceLite\RadianceLite.dll
 ```
 
-YMM4 を起動（または再起動）すると以下がエフェクト一覧に追加されます：
-- 「描画」「加工」カテゴリー → **軽量ピクセルソート**
-- 「合成」「クロマキー」カテゴリー → **軽量透過クロマキー**
-- 「装飾」カテゴリー → **輻射光 (軽量版)**
+YMM4 を起動（または再起動）すると、各エフェクトが一覧に追加されます。
 
 ------------------------------------------------------------------------
 ## ライセンス
 
-本統合パックは **LGPL-3.0** に基づいて提供されます。
-詳細は [GNU General Public License v3.0](https://www.gnu.org/licenses/gpl-3.0.html) をご参照ください。
-
-各プラグインの元ライセンスは以下のとおりです：
+本リポジトリには、プラグインごとに異なるライセンスが適用されます。
 
 | プラグイン | ライセンス |
 |---|---|
-| 軽量ピクセルソート | MIT License |
-| 軽量透過クロマキー | LGPL-3.0 |
-| 輻射光 (軽量版) | MIT License |
+| PixelSortPlugin | MIT License |
+| DirectionalColorKeyLite | GNU Lesser General Public License v3.0 (LGPL-3.0) |
+| RadianceLite | MIT License |
+
+詳細は各プラグインディレクトリの `LICENSE` ファイル、および第三者ライセンスファイルを参照してください。
+
+- [MIT License](https://opensource.org/license/mit/)
+- [GNU LGPL v3.0](https://www.gnu.org/licenses/lgpl-3.0.html)
