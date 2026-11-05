@@ -1,0 +1,90 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0-windows10.0.19041.0</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <AssemblyName>VoronoiNoiseLite</AssemblyName>
+    <RootNamespace>VoronoiNoiseLite</RootNamespace>
+    <Version>1.0.0</Version>
+    <Platforms>AnyCPU;x64</Platforms>
+    <PlatformTarget>x64</PlatformTarget>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <CopyLocalLockFileAssemblies>false</CopyLocalLockFileAssemblies>
+    <EnableSourceLink>false</EnableSourceLink>
+    <!-- Roslyn OOM 対策 -->
+    <UseSharedCompilation>false</UseSharedCompilation>
+    <YMM4DirPath Condition="'$(YMM4DirPath)' == ''">C:\YMM4\</YMM4DirPath>
+  </PropertyGroup>
+
+  <!-- スクラッチファイルを除外 -->
+  <ItemGroup>
+    <Compile Remove="TestCompiler.cs" />
+    <Compile Remove="VoronoiNoise.cs" />
+    <Compile Remove="NoiseBase.cs" />
+    <Compile Remove="NoiseEffect.cs" />
+    <Compile Remove="VoronoiNoiseParameter.cs" />
+    <Compile Remove="VoronoiNoiseParameterData.cs" />
+    <Compile Remove="probe\**\*" />
+  </ItemGroup>
+
+  <!-- 埋め込み CSO シェーダー -->
+  <ItemGroup>
+    <Resource Include="Shaders\VoronoiNoiseLite.cso" />
+  </ItemGroup>
+
+  <!-- 参照 DLL（すべて Private=false でコピーしない） -->
+  <ItemGroup>
+    <Reference Include="SharpGen.Runtime">
+      <HintPath>$(YMM4DirPath)SharpGen.Runtime.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="SharpGen.Runtime.COM">
+      <HintPath>$(YMM4DirPath)SharpGen.Runtime.COM.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Vortice.Direct2D1">
+      <HintPath>$(YMM4DirPath)Vortice.Direct2D1.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Vortice.Direct3D11">
+      <HintPath>$(YMM4DirPath)Vortice.Direct3D11.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Vortice.DirectX">
+      <HintPath>$(YMM4DirPath)Vortice.DirectX.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Vortice.DXGI">
+      <HintPath>$(YMM4DirPath)Vortice.DXGI.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Vortice.Mathematics">
+      <HintPath>$(YMM4DirPath)Vortice.Mathematics.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="YukkuriMovieMaker">
+      <HintPath>$(YMM4DirPath)YukkuriMovieMaker.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="YukkuriMovieMaker.Controls">
+      <HintPath>$(YMM4DirPath)YukkuriMovieMaker.Controls.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="YukkuriMovieMaker.Plugin">
+      <HintPath>$(YMM4DirPath)YukkuriMovieMaker.Plugin.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+
+  <!-- ビルド後: プラグインフォルダーへコピー -->
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent" Condition="'$(SkipPluginDeploy)' != 'true'">
+    <PropertyGroup>
+      <PluginOutputDir>$(YMM4DirPath)user\plugin\VoronoiNoiseLite\</PluginOutputDir>
+    </PropertyGroup>
+    <MakeDir Directories="$(PluginOutputDir)" />
+    <Copy SourceFiles="$(TargetPath)" DestinationFolder="$(PluginOutputDir)" ContinueOnError="true" Retries="0" />
+  </Target>
+
+</Project>
